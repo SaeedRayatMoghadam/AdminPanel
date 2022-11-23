@@ -45,6 +45,13 @@
   background-color: #57caeb;
 }
 
+
+.btn-light{
+  background-color: #ebf3ff;
+  color: #002152;
+}
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
@@ -72,6 +79,11 @@
 .card{
   border: none !important;
   border-radius: 0.7rem;
+}
+
+.card-header{
+  background-color: #fff;
+  border-bottom: none !important;
 }
 
 
@@ -170,7 +182,6 @@ section.sidebar {
 /* <-- Main --> */
 section.main {
   background-color: #f2f7ff;
-  height: 100vh;
   transition: all .5s ease-in-out;
 }
 

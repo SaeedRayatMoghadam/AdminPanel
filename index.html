@@ -144,10 +144,167 @@
       </div>
     </section>
     <section class="main" :class="open || 'active' ">
-      <header>
-        <i @click="toggle" class="bi bi-justify fs-3 cursor-pointer"></i>
+      <header class="d-flex justify-content-between align-items-center p-3">
+        <div>
+          <a href="#" class="sidebar-toggler"><i @click="toggle" class="bi bi-justify fs-3 cursor-pointer"></i></a>
+        </div>
+        <div class="d-flex align-items-center">
+
+          <div class="dropdown">
+            <div class="dropdown-toggle cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="position-absolute top-0 end-50 translate-middle badge rounded-pill bg-danger">
+                5
+              </span>
+              <i class="bi bi-envelope fs-4 text-gray-600"></i>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item fs-7" href="#"> پیام ها </a></li>
+              <li><a class="dropdown-item fs-7" href="#"> پیام جدید </a></li>
+              <li><a class="dropdown-item fs-7" href="#"> ویرایش پیام </a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown mx-4">
+            <div class="dropdown-toggle cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-bell fs-4 text-gray-600"></i>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item fs-7" href="#"> لورم ایپسوم </a></li>
+              <li><a class="dropdown-item fs-7" href="#"> لورم ایپسوم متن </a></li>
+              <li><a class="dropdown-item fs-7" href="#"> لورم ایپسوم متن ساختگی </a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown cursor-pointer">
+            <div class="dropdown-toggle profile d-flex align-items-center" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img width="45" class="img-fluid rounded-circle me-2" src="./images/7.jpg" alt="">
+              <div>
+                <h6 class="fs-6 fw-bold text-gray-600 mb-0">سعید رعیت مقدم</h6>
+                <p class="fs-8 text-gray-600 mb-0">ادمین</p>
+              </div>
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item fs-7" href="#">
+                  <i class="bi bi-person fs-5 me-1"></i>
+                  پروفایل
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fs-7" href="#">
+                  <i class="bi bi-gear fs-6 me-1"></i>
+                  تنظیمات
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item fs-7" href="#">
+                  <i class="bi bi-wallet fs-6 me-1"></i>
+                  حساب کاربری
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item fs-7" href="#">
+                  <i class="bi bi-box-arrow-left fs-5 me-1"></i>
+                  خروج
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
       </header>
-      <div class="content">Content</div>
+      <div class="content p-2 p-lg-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-9">
+              <div class="row g-3">
+                
+                <div class="col-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-xl-4">
+                          <div class="stats-icon bg-purple">
+                            <i class="bi bi-eye-fill"></i>
+                          </div>
+                        </div>
+                        <div class="col-xl-8">
+                          <h6 class="fs-7 text-muted">بازدید ها</h6>
+                          <h6 class="fw-bold mb-0 purecounter" data-purecounter-start="0" data-purecounter-end="1800">0
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-xl-4">
+                          <div class="stats-icon bg-blue">
+                            <i class="bi bi-person-fill"></i>
+                          </div>
+                        </div>
+                        <div class="col-xl-8">
+                          <h6 class="fs-7 text-muted">کاربران</h6>
+                          <h6 class="fw-bold mb-0 purecounter" data-purecounter-start="0" data-purecounter-end="200">0
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-xl-4">
+                          <div class="stats-icon bg-green">
+                            <i class="bi bi-person-plus-fill"></i>
+                          </div>
+                        </div>
+                        <div class="col-xl-8">
+                          <h6 class="fs-7 text-muted">ادمین ها</h6>
+                          <h6 class="fw-bold mb-0 purecounter" data-purecounter-start="0" data-purecounter-end="30">0
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-xl-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row g-3">
+                        <div class="col-xl-4">
+                          <div class="stats-icon bg-red">
+                            <i class="bi bi-chat-left-text-fill"></i>
+                          </div>
+                        </div>
+                        <div class="col-xl-8">
+                          <h6 class="fs-7 text-muted">نظرات</h6>
+                          <h6 class="fw-bold mb-0 purecounter" data-purecounter-start="0" data-purecounter-end="1435">0
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-xl-3"></div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
@@ -157,6 +314,7 @@
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+
 
   <script defer src="https://unpkg.com/alpinejs@3.3.4/dist/cdn.min.js"></script>
 
